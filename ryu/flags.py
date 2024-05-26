@@ -127,3 +127,9 @@ CONF.register_cli_opts([
         'frr-version', LooseVersion, default=DEFAULT_ZSERV_FRR_VERSION,
         help='FRRouting version when integrated with FRRouting (e.g., 3.0)'),
 ], group='zapi')
+
+CONF.register_cli_opts([
+    # k_shortest_forwarding
+    cfg.IntOpt('k_paths', default=4, help='number of candidate paths of KSP.'),
+    cfg.StrOpt('weight', default='bw', help='weight type of computing shortest path.'),
+    cfg.IntOpt('fanout', default=4, help='switch fanout number.')])
