@@ -147,7 +147,7 @@ then
     wrapper="${with_venv}"
   else
     if [ $always_venv -eq 1 ]; then
-      # Automatically install the virtualenv
+      # Automatically install the virtualenv,
       ${PYTHON} tools/install_venv.py
       wrapper="${with_venv}"
     else
